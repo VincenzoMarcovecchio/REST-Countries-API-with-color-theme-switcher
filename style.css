@@ -55,6 +55,12 @@ h1 {
   align-items: center;
 }
 
+@media screen and(max-width:750px){
+  .btn-toggle {
+    margin:25px 0;
+  
+}
+
 .btn-toggle .fas {
   display: none;
 }
