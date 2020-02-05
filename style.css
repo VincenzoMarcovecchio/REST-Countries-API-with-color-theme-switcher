@@ -221,4 +221,14 @@ body.dark .btn-toggle .far {
   .search {
     min-width:270px;
   }
+  .modal {
+    left:8px;
+    right:8px;
+}
+  .modal img {
+    width:100%;
+  }
+  .modal-body{
+    padding:15px;
+  }
 }
