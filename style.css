@@ -215,4 +215,10 @@ body.dark .btn-toggle .far {
   body {
     width:100%;
   }
+  .card {
+    margin:40px auto;
+  }
+  .search {
+    min-width:270px;
+  }
 }
