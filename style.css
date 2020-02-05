@@ -224,6 +224,7 @@ body.dark .btn-toggle .far {
   .modal {
     left:8px;
     right:8px;
+    top:20px;
 }
   .modal img {
     width:100%;
