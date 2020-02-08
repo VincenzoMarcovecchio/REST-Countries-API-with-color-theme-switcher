@@ -232,4 +232,8 @@ body.dark .btn-toggle .far {
   .modal-body{
     padding:15px;
   }
+  
+  .container {
+    margin:0px 8px;
+  }
 }
