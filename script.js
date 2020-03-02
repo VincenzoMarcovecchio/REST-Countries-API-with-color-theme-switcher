@@ -62,18 +62,20 @@ function displayCountries(countries) {
       modal.style.display = "flex";
       showCountryDetails(country);
     });
+
     countriesEl.appendChild(countryEl);
   });
 }
 
 function showCountryDetails(country) {
   const modalImg = modal.querySelector("img");
-
   modalImg.src = country.flag;
   const modalBody = modal.querySelector(".modal-body");
   modalBody.innerHTML = `
 
-          <h2>
+
+  <div class="left-on-desktop">
+          <h2 class="modal-country">
           ${country.name}
           </h2>
           <p>
@@ -96,6 +98,9 @@ function showCountryDetails(country) {
             <strong>Capital:</strong>
             ${country.capital}
           </p>
+          </div>
+
+          <div class="right-on-desktop">
           <p>
             <strong>Level Domain:</strong>
             ${country.topLevelDomain[0]}
@@ -108,9 +113,18 @@ function showCountryDetails(country) {
             <strong>Languages:</strong>
             ${country.languages.map(language => language.name)}
           </p>
-         
+         </div>
+         <p class="border-countries">
+         <strong> Border Countries: </strong>
+          ${country.borders}
+  </p>
   `;
 }
+/*
+const countryBorderFullNmae = forEach((border) => {
+  let border = country.borders ;
+
+ )} */
 
 //toggle theme dark and light
 toggleBtn.addEventListener("click", () => {
