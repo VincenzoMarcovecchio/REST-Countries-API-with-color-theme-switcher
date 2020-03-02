@@ -44,7 +44,6 @@ h1 {
 }
 /* Theme button styling*/
 .btn-toggle {
-  border: none;
   font-size: 16px;
   color: inherit;
   cursor: pointer;
@@ -53,12 +52,8 @@ h1 {
   justify-content: space-between;
   width: 120px;
   align-items: center;
-}
-
-@media screen and(max-width: 750px){
-  .btn-toggle {
-    margin:25px 0;
-  }
+  cursor: pointer;
+  border: 1px solid #4e4e4e00 !important;
 }
 
 .btn-toggle .fas {
@@ -137,7 +132,7 @@ body.dark .btn-toggle .far {
   border-radius: 4px;
   overflow: hidden;
   cursor: pointer;
-  margin: 40px;
+  margin: 5%;
   background-color: var(--background-el);
 }
 
@@ -160,6 +155,7 @@ body.dark .btn-toggle .far {
 
 .container.countries {
   justify-content: center;
+  margin: auto;
 }
 
 /* Modal Stylyng */
@@ -181,14 +177,87 @@ body.dark .btn-toggle .far {
 .modal .container {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.12);
   background-color: var(--background-el);
+  width: 85vw;
+  height: 65vh;
+  justify-content: space-around;
 }
 
 .modal img {
-  max-width: 300px;
+  max-width: 35%;
 }
 
 .modal-body {
-  padding: 30px;
+  padding: 0px;
+  display: flex;
+  justify-content: space-around;
+  width: 53%;
+  position: relative;
+}
+
+.border-countries {
+  position: absolute;
+  bottom: -35%;
+  left: -77%;
+}
+.left-on-desktop {
+  text-align: left;
+  margin-right: 1.5rem;
+}
+.right-on-desktop {
+  text-align: left;
+  align-self: center;
+}
+
+@media screen and (max-width: 850px) {
+  .modal img {
+    max-width: 70%;
+    min-width: 230px;
+  }
+  .modal-body {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 2rem;
+  }
+
+  .modal .container {
+    height: 65vh;
+    width: 65vw;
+  }
+  .border-countries {
+    left: 0%;
+    bottom: -7%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .modal .container {
+    width: 80vw;
+    height: 80vh;
+  }
+
+  .border-countries {
+    left: 0%;
+  }
+
+  .modal-body {
+    flex-direction: column;
+    font-size: 0.7rem;
+  }
+
+  .right-on-desktop {
+    text-align: left;
+    align-self: unset;
+  }
+
+  .dropdown {
+    margin-top: 1rem;
+  }
+  .container {
+    padding: 30px 30px 50px 30px;
+  }
+  .btn-toggle {
+    margin-top: 1rem;
+  }
 }
 
 .btn-close {
@@ -200,40 +269,4 @@ body.dark .btn-toggle .far {
   cursor: pointer;
   color: inherit;
   background-color: var(--background-el);
-}
-
-@media screen and (max-width:450px){
-  
-  .btn-toggle{
-    margin-top:1rem;
-  }
-  
-  .dropdown{
-    margin-top:1rem;
-  }
-  
-  body {
-    width:100%;
-  }
-  .card {
-    margin:40px auto;
-  }
-  .search {
-    min-width:270px;
-  }
-  .modal {
-    left:8px;
-    right:8px;
-    top:20px;
-}
-  .modal img {
-    width:100%;
-  }
-  .modal-body{
-    padding:15px;
-  }
-  
-  .container {
-    margin:0px 8px;
-  }
 }
