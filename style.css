@@ -196,7 +196,7 @@ body.dark .btn-toggle .far {
 
 .border-countries {
   position: absolute;
-  bottom: -35%;
+  bottom: -100px;
   left: -77%;
 }
 .left-on-desktop {
